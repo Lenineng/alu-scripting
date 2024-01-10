@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
 
-pattern = /school/
+regex='school'
 
-input_string = ARGV[0]
 
-if input_string.match?(pattern)
-  puts input_string
-end
+if [[ $1 =~ $regex ]]; then
+    echo "$1" | cat -e
+  
+fi 
